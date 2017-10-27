@@ -1,0 +1,7 @@
+<div id="sideNav">
+  <ul class="nav flex-column">
+    <li *ngFor="let mlist of menuList">
+      <a class="nav-link" uiSref="{{mlist.state}}">{{mlist.name}}</a>
+    </li>
+  </ul>
+</div>

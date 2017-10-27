@@ -1,0 +1,39 @@
+<div class="jumbotron">
+  <h1 class="display-4">Todo List</h1>
+</div>
+<div class="container">
+  <form #todoForm="ngForm" (ngSubmit)="addTask(todoForm)">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <input type="input" name="task" [(ngModel)]="txtTask" class="form-control" placeholder="Task name">
+      </div>
+      <div class="form-group col-md-4">
+        <input type="input" name="description" [(ngModel)]="txtDescription" class="form-control" placeholder="Description">
+      </div>
+      <div class="form-check col-md-2">
+        <label for="">
+          <input type="checkbox" [(ngModel)]="chkComplete" name="completeFlag"> Complete
+        </label>
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-primary" name="button">Add Task</button>
+      </div>
+    </div>
+  </form>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Description</th>
+        <th>Complete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of todoList">
+        <td>{{item.task}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.completeFlag}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

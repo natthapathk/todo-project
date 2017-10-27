@@ -1,0 +1,16 @@
+<nav class="navbar navbar-dark sticky-top bg-dark">
+  <div class="navbar-brand">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" uiSref="home">TODO</a>
+  </div>
+  <div ngbDropdown>
+    <button type="button" name="button" class="btn btn-primary" ngbDropdownToggle>Profile</button>
+    <div ngbDropdownMenu>
+      <button class="dropdown-item" uiSref="profile">Profile</button>
+      <div class="dropdown-divider"></div>
+      <button class="dropdown-item" uiSref="login">Logout</button>
+    </div>
+  </div>
+</nav>
